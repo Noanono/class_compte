@@ -1,16 +1,20 @@
 #include <iostream>
 using namespace std;
 
-#include "Compte.h"
+#include "Compte_remun.h"
 
 int main() {
 
-    Compte compte(100);
+    Compte_remun compte(100, 2);
 
     compte.crediter(50);
     compte.debiter(20);
 
-    cout << "Le solde du compte est de " << compte.getSolde() << "€" << endl;
+    compte.afficher();
+
+    compte.calculerInterets();
+
+    compte.afficher();
 
     return 0;
 }

@@ -7,9 +7,13 @@
 
 
 class Compte {
+
+private:
+    float solde;
+
 public:
-    Compte();
-    Compte(float);
+    Compte(float =0);
+    ~Compte();
     /*  Role    : ajoute une somme au solde
     Entrees : 1 reel
     Sortie  : vide
@@ -20,14 +24,14 @@ public:
     Sortie  : vide
      */
     void debiter(float);
-    /*  Role    : renvoi le solde
+    /*  Role    : affiche le solde
     Entrees : vide
-    Sortie  : 1 entier, valeur du solde
+    Sortie  : vide
      */
+    void afficher() const;
     float getSolde() const;
+    void setSolde(float);
 
-private:
-    float solde;
 };
 
 
